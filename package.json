@@ -1,0 +1,25 @@
+{
+    "name": "anki-cloze",
+    "displayName": "anki-cloze",
+    "description": "Anki cloze deletion",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "anki",
+            "aliases": ["anki", "anki"],
+            "extensions": [".anki"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "anki",
+            "scopeName": "source.anki",
+            "path": "./syntaxes/anki.tmLanguage.json"
+        }]
+    }
+}

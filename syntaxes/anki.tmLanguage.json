@@ -1,0 +1,39 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "anki",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#double-brace"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.anki",
+					"match": "{{c\\d::.+?}}"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.anki",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.anki",
+					"match": "\\\\."
+				}
+			]
+		},
+		"double-brace": {
+			"name": "cloze.double.brace.anki",
+			"begin": "{{",
+			"end": "}}"
+		}
+	},
+	"scopeName": "source.anki"
+}
